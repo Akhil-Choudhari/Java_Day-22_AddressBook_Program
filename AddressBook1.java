@@ -70,6 +70,52 @@ class AddressBook1{
         contents[selection].last = last;
         contents[selection].address = address;
         contents[selection].email = email;
+   
+        public void sort(int n){
+            for(int i = 0;i<contents.length;i++){
+                for (int j = 0;j<contents.length;j++){
+                    switch(n){
+                        case 1:
+                            if (contents[i].first.compareTo(contents[j].first)<0){
+                                Entry temp = contents[i];
+                                contents[i] = contents[j];
+                                contents[j] = temp;
+                            }
+                            break;
+                        case 2:
+                            if (contents[i].last.compareTo(contents[j].last)<0){
+                                Entry temp = contents[i];
+                                contents[i] = contents[j];
+                                contents[j] = temp;
+                            }
+                            break;
+                        case 3:
+                            if (contents[i].address.compareTo(contents[j].address)<0){
+                                Entry temp = contents[i];
+                                contents[i] = contents[j];
+                                contents[j] = temp;
+                            }
+                            break;
+                        case 4:
+                            if (contents[i].email.compareTo(contents[j].email)<0){
+                                Entry temp = contents[i];
+                                contents[i] = contents[j];
+                                contents[j] = temp;
+                            }
+                            break;
+                        default: 
+                            System.out.println("Error: invalid field");
+                            break;
+                    }
+                }
+            }
+        }
+        public void addFromCopy(Entry e){
+            if (entries<contents.length){
+                contents[entries] = e;
+                entries++;
+                }
+                else System.out.println("Error: book is full");
     }
     
     }
