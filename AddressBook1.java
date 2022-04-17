@@ -38,6 +38,17 @@ class AddressBook1{
             contents[i] = new Entry();
         }
     }
-    
+    public int getEntries(){
+        return contents.length;
+    }
+    //Adds an entry to the book
+    public void add(String first, String last, String address, String email){
+        if (entries<contents.length){
+        contents[entries] = new Entry(first, last, address, email);
+        entries++;
+        }
+        else System.out.println("Error: book is full");
+    }
+
     
     }
