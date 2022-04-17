@@ -14,8 +14,12 @@ class AddressBook1{
             this.last = last;
             this.address = address;
             this.email = email;
-   
        }
    
-    
+        Entry(){
+            first = "";
+            last = "";
+            address = "";
+            email = "";
+        }
     }}
