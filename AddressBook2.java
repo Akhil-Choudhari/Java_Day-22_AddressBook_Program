@@ -34,5 +34,12 @@ public class AddressBook2 {
 	                }
 	                else System.out.println("You must create at least 1 Entry.");
 	                }
-	    
-	    }}
+	        }
+	        boolean done = false;
+	        int selectedBook = 0;
+	        int selection;
+	        while (done==false){
+	            System.out.println("Book "+selectedBook+" is currently selected.");
+	
+	        }
+	       }}
