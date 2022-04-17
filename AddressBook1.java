@@ -22,4 +22,22 @@ class AddressBook1{
             address = "";
             email = "";
         }
-    }}
+        public void readEntry(){
+            System.out.println("First Name:"+first );
+            System.out.println("Last Name:"+last );
+            System.out.println("Address:"+address );
+            System.out.println("Email:"+email );
+        }
+    }
+
+    private int entries = 0;
+    Entry[] contents;
+    public void initEntries(int e){
+        contents = new Entry[e];
+        for (int i = 0;i<contents.length;i++){ 
+            contents[i] = new Entry();
+        }
+    }
+    
+    
+    }
