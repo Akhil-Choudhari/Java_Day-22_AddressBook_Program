@@ -20,4 +20,19 @@ public class AddressBook2 {
 	            }
 	            else System.out.print("You must create at least 1 book.");
 	            }
-}}
+	        for (int i=0;i<library.length;i++){
+
+
+	            library[i] = new AddressBook1(); 
+
+	            while(true){
+	                System.out.print("How many entries in book "+i+"? ");
+	                howManyEntries = s.nextInt();
+	                if (howManyEntries>0) {
+	                    library[i].initEntries(howManyEntries);                
+	                    break;
+	                }
+	                else System.out.println("You must create at least 1 Entry.");
+	                }
+	    
+	    }}
