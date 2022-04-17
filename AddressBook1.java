@@ -41,7 +41,7 @@ class AddressBook1{
     public int getEntries(){
         return contents.length;
     }
-    //Adds an entry to the book
+   
     public void add(String first, String last, String address, String email){
         if (entries<contents.length){
         contents[entries] = new Entry(first, last, address, email);
@@ -49,6 +49,27 @@ class AddressBook1{
         }
         else System.out.println("Error: book is full");
     }
+    public void remove(int entry){
+        if (entries>0){
+            contents[entry] = new Entry();
+            for (int i = 0;i<entries-entry;i++){
+                if (entry+1==entries) contents[entry] = new Entry();
+                else{
+                    Entry temp = contents[entry+i];
+                    contents[entry+i] = contents[entry+i+1]; 
+                    contents[entry+i+1] = temp;
+                }
+            }
+            entries--;
+            }
+            else System.out.println("Error: book is empty.");
+    }
 
+    public void edit(String first, String last, String address, String email, int selection){
+        contents[selection].first = first;
+        contents[selection].last = last;
+        contents[selection].address = address;
+        contents[selection].email = email;
+    }
     
     }
